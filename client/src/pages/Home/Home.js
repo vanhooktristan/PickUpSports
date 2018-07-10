@@ -73,24 +73,8 @@ class Home extends Component {
         </Row>
         <Row>
           <Col size="md-12">
-            <Card title="Results">
-              {this.state.articles.length ? (
-                <List>
-                  {this.state.articles.map(article => (
-                    <Article
-                      key={article._id}
-                      _id={article._id}
-                      title={article.headline.main}
-                      url={article.web_url}
-                      date={article.pub_date}
-                      handleClick={this.handleArticleSave}
-                      buttonText="Save Article"
-                    />
-                  ))}
-                </List>
-              ) : (
-                <h2 className="text-center">{this.state.message}</h2>
-              )}
+            <Card title="How to get started">
+              <p className="text-center">The best way to start a new pickUp game is to find a place to play. This all depends on what sport is being played, however most sports can be played in an open field. By clicking the Create button at the top, you are allowed to create your own PickUp game! Fill out the form by entering the desired sport, location, time and how many people are playing. By doing so other users can see PickUp games you create. This allows you to fill in the neccessary players you need for the sport being played.</p>
             </Card>
           </Col>
         </Row>
