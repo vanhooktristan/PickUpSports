@@ -67,7 +67,7 @@ class Home extends Component {
           </Col>
           <Col size="md-12">
             <Card title="About">
-              <p className="text-center">Ever wanted to play a sport for fun without paying rediculous team fees? Not to mention finding enough people to form a team. This app is your solution!! Here you can create PickUp games and have others join you that have similar interests in the sport you are playing. No sign-up fees, no field rental, no worries! Here on PickUp we are all about the community coming together in an active and cost effective way. With this app you have the ability to try out new sports with people who are just wanting to have fun or get better without breaking the bank. </p>
+              <p className="text-center">Have you ever wanted to play a sport for fun without paying rediculous team fees? Not to mention finding enough people to form a team. This app is your solution!! Here you can create PickUp games and have others join you that have similar interests in the sport you are playing. No sign-up fees, no field rental, no worries! Here on PickUp we are all about the community coming together in an active and cost effective way. With this app you have the ability to try out new sports with people who are just wanting to have fun or get better without breaking the bank. </p>
             </Card>
           </Col>
         </Row>
