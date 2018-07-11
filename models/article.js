@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const gameList = new Schema({
+const articleSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true },
-  sport: { type: String, required: true },
-  location: { type: String, required: true },
-  numPlayers: { type: Date, default: Date.now }
+  title: { type: String, required: true },
+  url: { type: String, required: true },
+  date: { type: Date, default: Date.now }
 }, { _id: false });
 
-const Game = mongoose.model("Game", gameList);
+const Article = mongoose.model("Article", articleSchema);
 
-module.exports = Game;
+module.exports = Article;

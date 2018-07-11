@@ -11,33 +11,33 @@ const Form = props => (
         id="topic"
         type="text"
         value={props.q}
-        placeholder="Soccer"
+        placeholder="Net Neutrality"
         name="q"
         onChange={props.handleInputChange}
         required
       />
       <label htmlFor="start-year">
-        <strong>Location</strong>
+        <strong>Start Year</strong>
       </label>
       <input
         className="form-control"
         id="start-year"
         type="number"
         value={props.start_year}
-        placeholder="Swope Park, Kansas City"
+        placeholder="2017"
         name="start_year"
         onChange={props.handleInputChange}
         required
       />
       <label htmlFor="end-year">
-        <strong># of players</strong>
+        <strong>End Year</strong>
       </label>
       <input
         className="form-control"
         id="end-year"
         type="number"
         value={props.end_year}
-        placeholder="5"
+        placeholder="2018"
         name="end_year"
         onChange={props.handleInputChange}
         required

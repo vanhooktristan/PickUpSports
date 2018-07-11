@@ -65,17 +65,6 @@ class Create extends Component {
               </h2>
             </Jumbotron>
           </Col>
-          <Col size="md-12">
-            <Card title="Create PickUp Game">
-              <Form
-                handleInputChange={this.handleInputChange}
-                handleFormSubmit={this.handleFormSubmit}
-                q={this.state.q}
-                start_year={this.state.start_year}
-                end_year={this.state.end_year}
-              />
-            </Card>
-          </Col>
         </Row>
         <Row>
           <Col size="md-12">

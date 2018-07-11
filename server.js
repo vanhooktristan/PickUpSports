@@ -19,7 +19,7 @@ app.use(routes);
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/gameList"
+  "mongodb://localhost/nytarticles"
 );
 
 // Start the API server
