@@ -65,7 +65,7 @@ class Games extends Component {
             {this.state.games.length ? (
               <List>
                 {this.state.games.map(games => (
-                  <ListItem key={games._id}>
+                  <ListItem key={games._id} id={games._id}>
                     <Link to={"/games/" + games._id}>
                       <strong>
                         {games.sport} by {games.location}
