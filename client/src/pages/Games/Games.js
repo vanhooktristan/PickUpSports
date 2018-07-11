@@ -68,7 +68,7 @@ class Games extends Component {
                   <ListItem key={games._id} id={games._id}>
                     <Link to={"/games/" + games._id}>
                       <strong>
-                        {games.sport}
+                        <h1>{games.sport}</h1>
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteGame(games._id)} />

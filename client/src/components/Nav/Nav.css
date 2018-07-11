@@ -1,10 +1,15 @@
 nav {
-    background-color: teal;
+    background-color: skyblue;
     
 }
 .nav-link {
     color: white;
+    font-size: 10px;
 }
 .nav-link:hover {
     color: orange;
+}
+
+.navbar {
+    font-size: 20px;
 }
