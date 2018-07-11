@@ -1,32 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./Nav.css";
+import "./Nav.css"
 
 const Nav = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-    <Link className="navbar-brand" to="/">
+  <nav className="navbar fixed-top navbar-expand-lg navbar-dark">
+    <a className="navbar-brand" href="/">
       PickUp
-    </Link>
-    <button
-      className="navbar-toggler"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span className="navbar-toggler-icon" />
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <Link className="nav-link" to="/create">Create</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/saved">Games</Link>
-        </li>
-      </ul>
-    </div>
+    </a>
+    <ul className="nav">
+      <li className="nav-item">
+        <a className="nav-link active" href="/create">Create</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="/games">Games</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="#">Locations</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link disabled" href="#">Saved</a>
+      </li>
+    </ul>
   </nav>
 );
 

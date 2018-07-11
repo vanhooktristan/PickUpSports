@@ -1,20 +1,16 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
-import Card from "../../components/Card";
-import Form from "../../components/Form";
-import Article from "../../components/Article";
-import Footer from "../../components/Footer";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
-import { List } from "../../components/List";
+import { Input, TextArea, FormBtn } from "../../components/Form";
+import Footer from "../../components/Footer";
 
 class Create extends Component {
   state = {
-    articles: [],
-    q: "",
-    start_year: "",
-    end_year: "",
-    message: "Search For PickUp games to begin!"
+    games: [],
+    sport: "",
+    location: "",
+    description: ""
   };
 
   handleInputChange = event => {
@@ -24,80 +20,54 @@ class Create extends Component {
     });
   };
 
-  getArticles = () => {
-    API.getArticles({
-      q: this.state.q,
-      start_year: this.state.start_year,
-      end_year: this.state.end_year
-    })
-      .then(res =>
-        this.setState({
-          articles: res.data,
-          message: !res.data.length
-            ? "No Articles Found, Try a different Query"
-            : ""
-        })
-      )
-      .catch(err => console.log(err));
-  };
-
   handleFormSubmit = event => {
     event.preventDefault();
-    this.getArticles();
-  };
-
-  handleArticleSave = id => {
-    const article = this.state.articles.find(article => article._id === id);
-    API.saveArticle(article).then(res => this.getArticles());
+    if (this.state.sport && this.state.location) {
+      API.saveGame({
+        sport: this.state.sport,
+        location: this.state.location,
+        description: this.state.description
+      })
+        .then(res => this.loadGames())
+        .catch(err => console.log(err));
+    }
   };
 
   render() {
     return (
-      <Container>
+      <Container fluid>
         <Row>
           <Col size="md-12">
             <Jumbotron>
-              <h1 className="text-center">
-                <strong>PickUp Sports</strong>
-              </h1>
-              <h2 className="text-center">
-                Create and search for PickUp games!
-              </h2>
+              <h1>Create A PickUp Game Here!</h1>
+              <h3>Fill out the form below to get started</h3>
             </Jumbotron>
-          </Col>
-          <Col size="md-12">
-            <Card title="Create PickUp Game">
-              <Form
-                handleInputChange={this.handleInputChange}
-                handleFormSubmit={this.handleFormSubmit}
-                q={this.state.q}
-                start_year={this.state.start_year}
-                end_year={this.state.end_year}
+            <form>
+              <Input
+                value={this.state.sport}
+                onChange={this.handleInputChange}
+                name="sport"
+                placeholder="Sport (required)"
               />
-            </Card>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-12">
-            <Card title="Results">
-              {this.state.articles.length ? (
-                <List>
-                  {this.state.articles.map(article => (
-                    <Article
-                      key={article._id}
-                      _id={article._id}
-                      title={article.headline.main}
-                      url={article.web_url}
-                      date={article.pub_date}
-                      handleClick={this.handleArticleSave}
-                      buttonText="Save Article"
-                    />
-                  ))}
-                </List>
-              ) : (
-                <h2 className="text-center">{this.state.message}</h2>
-              )}
-            </Card>
+              <Input
+                value={this.state.location}
+                onChange={this.handleInputChange}
+                name="location"
+                placeholder="Location (required)"
+              />
+              <TextArea
+                value={this.state.description}
+                onChange={this.handleInputChange}
+                name="description"
+                placeholder="Description (Optional)"
+              />
+              <FormBtn
+                disabled={!(this.state.location && this.state.sport)}
+                onClick={this.handleFormSubmit}
+              >
+                Create Game
+              </FormBtn>
+            </form>
           </Col>
         </Row>
         <Footer />

@@ -1,21 +1,20 @@
 import axios from "axios";
-import filterParams from "./filterParams";
 
 export default {
-  // Gets articles from the NYT API
-  getArticles: function(params) {
-    return axios.get("/api/nyt", { params: filterParams(params) });
+  // Gets all books
+  getGames: function() {
+    return axios.get("/api/games");
   },
-  // Gets all saved articles
-  getSavedArticles: function() {
-    return axios.get("/api/articles");
+  // Gets the book with the given id
+  getGame: function(id) {
+    return axios.get("/api/games/" + id);
   },
-  // Deletes the saved article with the given id
-  deleteArticle: function(id) {
-    return axios.delete("/api/articles/" + id);
+  // Deletes the book with the given id
+  deleteGame: function(id) {
+    return axios.delete("/api/games/" + id);
   },
-  // Saves an article to the database
-  saveArticle: function(articleData) {
-    return axios.post("/api/articles", articleData);
+  // Saves a book to the database
+  saveGame: function(bookData) {
+    return axios.post("/api/games", bookData);
   }
 };

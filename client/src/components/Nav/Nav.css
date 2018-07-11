@@ -1,3 +1,10 @@
-.navbar {
-  border-radius: 0;
+nav {
+    background-color: teal;
+    
+}
+.nav-link {
+    color: white;
+}
+.nav-link:hover {
+    color: orange;
 }
