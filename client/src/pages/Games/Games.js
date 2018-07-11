@@ -64,11 +64,11 @@ class Games extends Component {
             </Jumbotron>
             {this.state.games.length ? (
               <List>
-                {this.state.games.map(games => (
+                {this.state.games.map((games) => (
                   <ListItem key={games._id} id={games._id}>
                     <Link to={"/games/" + games._id}>
                       <strong>
-                        {games.sport} by {games.location}
+                        {games.sport}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteGame(games._id)} />

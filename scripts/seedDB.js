@@ -5,7 +5,7 @@ mongoose.Promise = global.Promise;
 // This file empties the Game collection and inserts the games
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/gamelist",
+  process.env.MONGODB_URI || "mongodb://localhost/game",
   {
     useMongoClient: true
   }
@@ -21,9 +21,9 @@ const gameSeed = [
   }
 ];
 
-db.Game
+db.game
   .remove({})
-  .then(() => db.Game.collection.insertMany(gameSeed))
+  .then(() => db.game.collection.insertMany(gameSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
     process.exit(0);
