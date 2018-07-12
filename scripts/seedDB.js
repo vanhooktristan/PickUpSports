@@ -17,6 +17,7 @@ const gameSeed = [
     location: "Swope Park Soccer Village, Kansas City, MO",
     description:
       "Just a few people going to soccer village to kick the ball around, interested in anyone willing to join us",
+    numPlayers: 8,
     date: new Date(Date.now())
   }
 ];

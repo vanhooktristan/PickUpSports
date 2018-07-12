@@ -12,6 +12,7 @@ class Games extends Component {
     games: [],
     sport: "",
     location: "",
+    numPlayers: "",
     description: ""
   };
 
@@ -22,7 +23,7 @@ class Games extends Component {
   loadGames = () => {
     API.getGames()
       .then(res =>
-        this.setState({ games: res.data, sport: "", location: "", description: "" })
+        this.setState({ games: res.data, sport: "", location: "", numPlayers: "", description: "" })
       )
       .catch(err => console.log(err));
   };
@@ -46,6 +47,7 @@ class Games extends Component {
       API.saveGame({
         sport: this.state.sport,
         location: this.state.location,
+        numPlayers: this.state.numPlayers,
         description: this.state.description
       })
         .then(res => this.loadGames())

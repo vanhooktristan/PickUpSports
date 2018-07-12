@@ -10,6 +10,7 @@ class Create extends Component {
     games: [],
     sport: "",
     location: "",
+    numPlayers: "",
     description: ""
   };
 
@@ -26,6 +27,7 @@ class Create extends Component {
       API.saveGame({
         sport: this.state.sport,
         location: this.state.location,
+        numPlayers: this.state.numPlayers,
         description: this.state.description
       })
         .then(res => this.loadGames())
@@ -54,6 +56,12 @@ class Create extends Component {
                 onChange={this.handleInputChange}
                 name="location"
                 placeholder="Location (required)"
+              />
+              <Input
+                value={this.state.numPlayers}
+                onChange={this.handleInputChange}
+                name="numPlayers"
+                placeholder="# of Players (required)"
               />
               <TextArea
                 value={this.state.description}

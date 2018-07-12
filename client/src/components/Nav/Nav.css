@@ -4,7 +4,6 @@ nav {
 }
 .nav-link {
     color: white;
-    font-size: 10px;
 }
 .nav-link:hover {
     color: orange;
@@ -14,3 +13,8 @@ nav {
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace
 }
+@media (max-width: 900px) {
+    .nav-link {
+      font-size: 10px;
+    }
+  }
