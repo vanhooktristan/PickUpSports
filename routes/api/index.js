@@ -2,6 +2,6 @@ const router = require("express").Router();
 const gameRoutes = require("./game.js");
 
 // Game routes
-router.use("/game.js", gameRoutes);
+router.use("/games", gameRoutes);
 
 module.exports = router;
