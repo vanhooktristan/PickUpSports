@@ -21,7 +21,7 @@ const gameSeed = [
   }
 ];
 
-db.game
+db.Game
   .remove({})
   .then(() => db.game.collection.insertMany(gameSeed))
   .then(data => {
