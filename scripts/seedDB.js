@@ -23,7 +23,7 @@ const gameSeed = [
 
 db.Game
   .remove({})
-  .then(() => db.game.collection.insertMany(gameSeed))
+  .then(() => db.Game.collection.insertMany(gameSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
     process.exit(0);
