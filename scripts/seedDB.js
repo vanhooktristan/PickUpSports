@@ -19,6 +19,38 @@ const gameSeed = [
       "Just a few people going to soccer village to kick the ball around, interested in anyone willing to join us",
     numPlayers: 8,
     date: new Date(Date.now())
+  },
+  {
+    sport: "Basketball",
+    location: "Rec Center University of Missouri Kansas City, Kansas City, MO",
+    description:
+      "Very skilled players are welcome, we are looking for a challenge!",
+    numPlayers: 4,
+    date: new Date(Date.now())
+  },
+  {
+    sport: "Baseball",
+    location: "Fountain Bluff Park, Kansas City, MO",
+    description:
+      "We are a bunch of lazy people that like to play outfield, need a player to come out and hit dingers for us",
+    numPlayers: 4,
+    date: new Date(Date.now())
+  },
+  {
+    sport: "Soccer",
+    location: "River Park, Parkville, MO",
+    description:
+      "We are looking to play 3v3 soccer with people that just want to play for fun",
+    numPlayers: 5,
+    date: new Date(Date.now())
+  },
+  {
+    sport: "Tennis",
+    location: "Clayview Country Club, Kansas City, MO",
+    description:
+      "Looking to play doubles with some experienced players",
+    numPlayers: 2,
+    date: new Date(Date.now())
   }
 ];
 

@@ -23,7 +23,7 @@ class Detail extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {this.state.game.sport} by {this.state.game.location}
+                PickUp Details
               </h1>
             </Jumbotron>
           </Col>
@@ -31,9 +31,15 @@ class Detail extends Component {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Description</h1>
+              <h1>{this.state.game.sport}</h1>
+              <p>Number of Players: {this.state.game.numPlayers}</p>
+              <h3>Description</h3>
               <p>
                 {this.state.game.description}
+              </p>
+              <h3>Location</h3>
+              <p>
+                {this.state.game.location}
               </p>
             </article>
           </Col>
