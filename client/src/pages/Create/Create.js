@@ -55,7 +55,7 @@ class Create extends Component {
                 value={this.state.location}
                 onChange={this.handleInputChange}
                 name="location"
-                placeholder="Location (required)"
+                placeholder="Location, City, State(required)"
               />
               <Input
                 value={this.state.numPlayers}

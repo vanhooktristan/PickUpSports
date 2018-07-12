@@ -16,7 +16,7 @@ const Nav = () => (
         <a className="nav-link" href="/games">Games</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Locations</a>
+        <a className="nav-link" href="/locations">Locations</a>
       </li>
       <li className="nav-item">
         <a className="nav-link disabled" href="#">Saved</a>

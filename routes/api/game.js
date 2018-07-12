@@ -9,6 +9,9 @@ router.route("/")
 router.route("/games")
   .get(gamesController.findAll);
 
+router.route("/locations")
+  .get(gamesController.findAll);
+
 // Matches with "/api/games/:id"
 router.route("/:id")
   .get(gamesController.findById)
