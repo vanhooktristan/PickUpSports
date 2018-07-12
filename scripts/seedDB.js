@@ -5,7 +5,7 @@ mongoose.Promise = global.Promise;
 // This file empties the Game collection and inserts the games
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/game",
+  process.env.MONGODB_URI || "mmongodb://<dbuser>:<dbpassword>@ds235401.mlab.com:35401/heroku_rbkckc4m",
   {
     useMongoClient: true
   }
@@ -18,6 +18,7 @@ const gameSeed = [
     description:
       "Just a few people going to soccer village to kick the ball around, interested in anyone willing to join us",
     numPlayers: 8,
+    saved: false,
     date: new Date(Date.now())
   },
   {
@@ -26,6 +27,7 @@ const gameSeed = [
     description:
       "Very skilled players are welcome, we are looking for a challenge!",
     numPlayers: 4,
+    saved: false,
     date: new Date(Date.now())
   },
   {
@@ -34,6 +36,7 @@ const gameSeed = [
     description:
       "We are a bunch of lazy people that like to play outfield, need a player to come out and hit dingers for us",
     numPlayers: 4,
+    saved: false,
     date: new Date(Date.now())
   },
   {
@@ -42,6 +45,7 @@ const gameSeed = [
     description:
       "We are looking to play 3v3 soccer with people that just want to play for fun",
     numPlayers: 5,
+    saved: false,
     date: new Date(Date.now())
   },
   {
@@ -50,6 +54,7 @@ const gameSeed = [
     description:
       "Looking to play doubles with some experienced players",
     numPlayers: 2,
+    saved: false,
     date: new Date(Date.now())
   }
 ];

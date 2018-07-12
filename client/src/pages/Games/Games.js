@@ -13,7 +13,8 @@ class Games extends Component {
     sport: "",
     location: "",
     numPlayers: "",
-    description: ""
+    description: "",
+    saved: false
   };
 
   componentDidMount() {

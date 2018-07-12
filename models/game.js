@@ -6,6 +6,7 @@ const gameSchema = new Schema({
   location: { type: String, required: true },
   numPlayers: { type: Number, required: true},
   description: String,
+  saved: false,
   date: { type: Date, default: Date.now }
 });
 
