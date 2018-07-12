@@ -73,6 +73,7 @@ class Locations extends Component {
                         <h1>{games.location}</h1>
                       </strong>
                     </Link>
+                    <p>Sport being played:<strong>{games.sport}</strong></p>
                     <DeleteBtn onClick={() => this.deleteGame(games._id)} />
                   </ListItem>
                 ))}

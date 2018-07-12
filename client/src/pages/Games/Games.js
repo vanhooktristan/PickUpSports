@@ -73,6 +73,7 @@ class Games extends Component {
                         <h1>{games.sport}</h1>
                       </strong>
                     </Link>
+                    <p>Current # of Players: {games.numPlayers}</p>
                     <DeleteBtn onClick={() => this.deleteGame(games._id)} />
                   </ListItem>
                 ))}
