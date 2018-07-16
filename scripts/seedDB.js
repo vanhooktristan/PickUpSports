@@ -5,7 +5,7 @@ mongoose.Promise = global.Promise;
 // This file empties the Game collection and inserts the games
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mmongodb://<dbuser>:<dbpassword>@ds235401.mlab.com:35401/heroku_rbkckc4m",
+  process.env.MONGODB_URI || "mongodb://localhost/game",
   {
     useMongoClient: true
   }
