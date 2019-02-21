@@ -16,7 +16,7 @@ class Home extends Component {
                 <strong>PickUp Sports</strong>
               </h1>
               <h2 className="text-center">
-                Join in on the fun and PickUp a new hobby!!
+                Join on the fun and PickUp a new hobby!!
               </h2>
             </Jumbotron>
           </Col>
